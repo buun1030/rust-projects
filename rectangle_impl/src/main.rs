@@ -40,8 +40,7 @@ fn main() {
     println!("Can rect1 hold rect3? {}", rect1.can_hold(&rect3));
 
     println!(
-        "The area of the rectangle is {} square pixels.",
-        rect1.area()
+        "The area of the rectangle is {} square pixels.", rect1.area()
     );
 
     if rect1.width() {
