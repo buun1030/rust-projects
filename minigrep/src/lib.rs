@@ -44,7 +44,10 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
-pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+pub fn search<'a>(
+    query: &str, 
+    contents: &'a str
+) -> Vec<&'a str> {
     let mut results = Vec::new();
 
     for line in contents.lines() {
@@ -85,7 +88,9 @@ safe, fast, productive.
 Pick three.
 Duct tape.";
 
-        assert_eq!(vec!["safe, fast, productive."], search(query, contents));
+        assert_eq!(
+            vec!["safe, fast, productive."], search(query, contents)
+        );
     }
 
     #[test]
@@ -98,8 +103,7 @@ Pick three.
 Trust me.";
 
         assert_eq!(
-            vec!["Rust:", "Trust me."],
-            search_case_insensitive(query, contents)
+            vec!["Rust:", "Trust me."], search_case_insensitive(query, contents)
         );
     }
 }
