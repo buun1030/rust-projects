@@ -17,6 +17,8 @@ fn main() {
     let c = Cons(Rc::new(RefCell::new(4)), Rc::clone(&a));
 
     *value.borrow_mut() += 10;
+    // The borrow_mut method returns a RefMut<T> smart pointer, 
+    // and we use the dereference operator on it and change the inner value
 
     println!("a after = {:?}", a);
     println!("b after = {:?}", b);
