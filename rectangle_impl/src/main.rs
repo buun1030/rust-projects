@@ -47,3 +47,4 @@ fn main() {
         println!("The rectangle has a nonzero width; it is {}", rect1.width);
     }
 }
+parent child
