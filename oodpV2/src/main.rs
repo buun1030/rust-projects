@@ -21,5 +21,6 @@ fn main() {
 
     // 3. When the post is approved, it gets published
     let post = post.approve();
+    println!("{}",post.content());
     assert_eq!("I ate a salad for lunch today", post.content());
 }

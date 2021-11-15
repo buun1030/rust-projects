@@ -14,6 +14,10 @@ fn main() {
     let s2 = s1.clone();
     let word = first_word(&s1);
     println!("s1 = {}", word);
+
+    let mut num = 5;
+    let r1 = &mut num;
+    let r2 = &mut num;
 }
 
 fn first_word(s: &String) -> &str {
