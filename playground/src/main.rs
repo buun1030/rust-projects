@@ -20,7 +20,7 @@ fn main() {
     diamond_graph.insert(4, vec![1, 2, 3]);
 
     let dg = &diamond_graph[&2];
-    println!("{:?}", dg);
+    println!("{:?}", diamond_graph[&2]);
 
     let s = String::from("hello");
     //let slice = &s[0..2];
