@@ -1,8 +1,7 @@
 use std::sync::mpsc;
-use std::thread;
 use std::sync::Arc;
 use std::sync::Mutex;
-
+use std::thread;
 
 // Modifying ThreadPool to hold Worker instances
 // instead of holding threads directly
@@ -30,9 +29,9 @@ impl ThreadPool {
         assert!(size > 0);
 
         let (sender, receiver) = mpsc::channel();
-        
+
         let receiver = Arc::new(Mutex::new(receiver));
-        
+
         let mut workers = Vec::with_capacity(size);
 
         for id in 0..size {
@@ -41,7 +40,6 @@ impl ThreadPool {
 
         ThreadPool { workers, sender }
     }
-
 
     pub fn execute<F>(&self, f: F)
     where
@@ -63,7 +61,7 @@ impl Drop for ThreadPool {
         }
 
         println!("Shutting down all workers.");
-        
+
         for worker in &mut self.workers {
             println!("Shutting down worker {}", worker.id);
 
@@ -102,9 +100,9 @@ impl Worker {
             }
         });
 
-        Worker { 
-            id, 
-            thread: Some(thread), 
+        Worker {
+            id,
+            thread: Some(thread),
         }
     }
 }

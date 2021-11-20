@@ -10,7 +10,6 @@ fn shoes_in_size(shoes: Vec<Shoe>, shoe_size: u32) -> Vec<Shoe> {
 
 // -------------------------------------------------
 struct Counter {
-
     count: u32,
 }
 
