@@ -1,5 +1,5 @@
 fn main() {
-    let x = 3.1415;
+    let x = std::f64::consts::PI;
     let r = 8.0;
     println!("the area of the circle is {}", x * r * r);
 }
