@@ -11,7 +11,7 @@ fn main() {
     println!("{}", s);
 
     let mut s1 = String::from("hello world");
-    let s2 = s1.clone();
+    let _s2 = s1.clone();
     let word = first_word(&s1);
     println!("s1 = {}", word);
 
